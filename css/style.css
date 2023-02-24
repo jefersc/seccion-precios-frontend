@@ -1,0 +1,250 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+
+:root {
+    --bodyBg: #f6fafe;
+    --primaryColor: #1a5af5;
+    --titleColor: #141f3d;
+    --paragraphColor: #99a0b1;
+}
+
+/*  reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bodyBg);
+    padding: .625rem;
+}
+
+
+/* Texto */
+.price {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.price__title {
+    color: var(--titleColor);
+    font-weight: 700;
+    font-size: 1.5625em;
+}
+
+.price__paragraph {
+    color: var(--paragraphColor);
+    font-weight: 400;
+    font-size: 1em;
+    padding: .9375rem 0;
+}
+
+/* Botones */
+.buttons {
+    background-color: #fff;
+    width: max-content;
+    margin: .9375rem auto;
+    padding: 5px;
+    display: flex;
+    gap: .625rem;
+    border-radius: .625rem;
+
+}
+
+.buttons__btn {
+    padding: .625rem 1.125rem;
+    border: none;
+    outline: none;
+    border-radius: .625rem;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.buttons__btn:nth-child(1) {
+    background-color: transparent;
+    color: var(--paragraphColor);
+}
+
+
+.buttons__btn:nth-child(2) {
+    background-color: var(--primaryColor);
+    color: #fff;
+}
+
+/* Cuadros */
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .3125rem;
+    margin-top: 1.5625rem;
+}
+
+.item {
+    --card: #fff;
+    --cardTitle: #141f3d;
+    --cardParagraph: #99a0b1;
+    --cardBenefit: #f9fbfc;
+    --marginTop: 0;
+    --showBtn: none;
+    --bgButtonBuy: #ffff;
+    --shadowBtn: 0 0 .375rem 0 #00000011;
+    --cardPrimaryColor: #1D64F2;
+    --scale: scale(0.9);
+    --display: none;
+
+    width: 16.875rem;
+    height: max-content;
+    background-color: var(--card);
+    border-radius: .625rem;
+    padding: 1.25rem 0;
+    text-align: center;
+    transform: var(--scale);
+    position: relative;
+    overflow: hidden;
+}
+
+.item::after {
+    content: "";
+    width: 13.75rem;
+    height: 13.75rem;
+    border-radius: 50%;
+    background-color: #376ff3;
+    position: absolute;
+    top: 12.5rem;
+    left: 50%;
+    transform: translateX(-50%) scale(2);
+    z-index: 10;
+    display: var(--display);
+}
+
+.item__title {
+    color: var(--cardTitle);
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.item__paragraph {
+    font-size: .8125rem;
+    padding: .625rem 0;
+    color: var(--cardParagraph);
+    font-weight: 600;
+}
+
+.item__price {
+    width: max-content;
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--cardTitle);
+    position: relative;
+    margin: 0 auto;
+    padding: .5rem;
+    position: relative;
+    z-index: 20;
+}
+
+.item__price span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: .5em;
+    font-weight: 900;
+    z-index: 20;
+}
+
+.item__btn {
+    background-color: #ffffff46;
+    color: #ffff;
+    padding: .5rem .625rem;
+    border: none;
+    outline: none;
+    border-radius: .3125rem;
+    cursor: pointer;
+    transition: .3s;
+    font-size: .8em;
+    margin: .625rem auto;
+    display: var(--showBtn);
+    position: relative;
+    z-index: 20;
+}
+
+/*Iluminar cuadros al pasar cursor*/
+#cards-box:hover {
+    box-shadow: 0 4px 20px 3px #1a73e8;
+    transition: 0.2s;
+  }
+
+.benefits {
+    background-color: var(--cardBenefit);
+    width: 90%;
+    margin: 0 auto;
+    margin-top: var(--marginTop);
+    border-radius: .625rem;
+    padding: 1.25rem 0;
+    position: relative;
+    z-index: 15;
+}
+
+.benefits__ul {
+    list-style: none;
+}
+
+.ul__li {
+    padding: .625rem 0;
+    text-align: left;
+    font-size: .8em;
+    font-weight: 600;
+    padding-left: 1.25rem;
+}
+
+.fa-circle-check {
+    color: var(--primaryColor);
+    margin-right: .3125rem;
+    font-size: 1em;
+}
+
+.buttons__btn--modify {
+    width: 80%;
+    background-color: var(--bgButtonBuy);
+    color: var(--cardPrimaryColor);
+    margin-top: 1.25rem;
+    padding: .8125rem 0;
+    box-shadow: var(--shadowBtn);
+}
+
+.item:nth-child(2) {
+    --card: #2d69f5;
+    --cardTitle: #ffffff;
+    --cardParagraph: #ececec;
+    --cardBenefit: #ffffff;
+    --marginTop: 1.5625rem;
+    --showBtn: block;
+    --bgButtonBuy: #1D64F2;
+    --shadowBtn: none;
+    --cardPrimaryColor: #fff;
+    --scale: scale(1);
+    --display: block;
+}
+
+
+/* Diseño responsive */
+@media screen and (max-width: 41.75rem) {
+    .price__title {
+        font-size: 1.3em;
+    }
+
+    .price__paragraph {
+        font-size: .9em;
+    }
+
+    .cards {
+        gap: 1.875rem;
+    }
+
+    .item {
+        --scale: scale(1);
+        width: 90%;
+    }
+}
