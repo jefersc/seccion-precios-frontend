@@ -1,5 +1,5 @@
 
-## **proyecto_2**: precios
+## **Seccion de precios**
 
 ## "iluminacion de los cuadros al pasar el cursor":
 ![Primer Diseno](./capturas/iluminar.png)
