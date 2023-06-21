@@ -1,4 +1,4 @@
-# **Empresa Buho** 
+
 ## **proyecto_2**: precios
 
 ## "iluminacion de los cuadros al pasar el cursor":
